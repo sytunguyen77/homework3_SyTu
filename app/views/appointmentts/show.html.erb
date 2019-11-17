@@ -2,7 +2,8 @@
 
 <p>
   <strong>Visit:</strong>
-  <%= @appointmentt.visit %>
+  <%= @appointmentt.visit.to_datetime.to_formatted_s :long_ordinal
+  %>
 </p>
 
 <p>

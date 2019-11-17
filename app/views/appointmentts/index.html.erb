@@ -10,12 +10,13 @@
       <th>Patient</th>
       <th colspan="3"></th>
     </tr>
+    
   </thead>
 
   <tbody>
     <% @appointmentts.each do |appointmentt| %>
       <tr>
-        <td><%= appointmentt.visit %></td>
+        <td><%= appointmentt.visit.to_datetime.to_formatted_s :long_ordinal %></td>
         <td><%= appointmentt.physician.name %></td>
         <td><%= appointmentt.patient.name %></td>
         <td><%= link_to 'Show', appointmentt %></td>
